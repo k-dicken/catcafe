@@ -1,0 +1,188 @@
+//RESET
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    // border: 1px red solid;
+}
+
+html, body {
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+table,
+a,
+button,
+label,
+select,
+option,
+form,
+textarea,
+b
+{
+    font-family: Sono;
+}
+
+p {
+    line-height: $body-XL;
+}
+
+//FONTS
+@font-face {
+    font-family: Sono;
+    src: url(../assets/fonts/Sono-VariableFont.ttf);
+}
+
+//CLASSES
+
+.bold {
+    font-weight: bold;
+}
+
+a {
+    color: $main-color-2;
+}
+
+a:hover {
+    color: $main-color-1;
+}
+
+a:active {
+    color: $extra-color;
+}
+
+.button {
+    width: fit-content;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: $body-M;
+}
+
+button:hover, .button:hover {
+    cursor: pointer;
+}
+
+.button-main {
+    background-color: $main-color-2;
+    padding: 14px 24px;
+    color: $white;
+}
+.button-main:hover {
+    background-color: $main-color-1;
+    color: $white;
+}
+
+.button-sub {
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 4px $main-color-2 solid;
+    color: $main-color-2;
+    font-size: $body-S;
+}
+
+.button-sub:hover {
+    border: 4px $main-color-1 solid;
+    color: $main-color-1;
+}
+
+.section {
+    width: 68%;
+    margin: 40px auto 0px auto;
+    padding: 40px 0;
+}
+
+.break-out {
+    width: 100%;
+    margin: 40px auto;
+    padding: 40px 16%;
+}
+
+.column {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.padding {
+    padding: 40px 0;
+}
+
+.image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 10px;
+}
+
+.socials {
+    display: flex;
+    min-width: fit-content;
+
+    a {
+        margin-left: 10px;
+
+        svg {
+            height: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .column {
+        flex-direction: column;
+
+        .column-child {
+            width: 100%;
+            min-width: none;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section {
+        width: 90%;
+        margin: 20px auto 0 auto;
+        padding: 40px 0;
+    }
+    
+    .break-out {
+        width: 100%;
+        padding: 40px 5%;
+    }
+}

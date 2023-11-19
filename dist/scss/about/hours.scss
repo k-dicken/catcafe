@@ -1,0 +1,38 @@
+.hours {
+    width: 100%;
+    background-color: $main-color-2;
+
+    .hours-section {
+        color: white;
+
+        .hours-content {
+            width: 100%;
+            margin-top: 20px;
+            
+            .hours-row {
+                display: flex;
+                align-items: center;
+
+                padding: 10px;
+
+                p {
+                    margin-bottom: 0;
+                }
+                
+                .table-day {
+                    text-align: left;
+                    font-weight: bold;
+                }
+
+                .table-hours {
+                    text-align: right;
+                }
+            }
+
+            .hours-row:hover {
+                background-color: $sub-color-2;
+            }
+        }
+    }
+
+}

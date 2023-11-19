@@ -1,0 +1,68 @@
+.step2 {
+    .step2-form {
+        width: 100%;
+
+        .form-times {
+            width: 45%;
+        }
+    
+        .form-calendar {
+            width: 50%;
+
+            .calendar-item {
+                width: calc(100% / 7);
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .form-calendar-header {
+                b {
+                    font-size: $body-L;
+                }
+            }
+
+            .form-calendar-labels {
+                margin: 20px 0;
+            }
+
+            .form-calendar-days {
+                display: flex;
+                // justify-content: space-between;
+                flex-wrap: wrap;
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+
+                .past-day, .future-day {
+                    color: $grey;
+                }
+
+                .active-day, .current-day, .future-day {
+                    cursor: pointer;
+                }
+
+                .active-day {
+                    p {
+                        background-color: $light-grey;
+                    }
+                }
+
+                .current-day {
+                    p {
+                        border: 2px solid $dark-grey;
+                        background-color: $grey;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

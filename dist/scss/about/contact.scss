@@ -1,0 +1,33 @@
+.contact {
+    .contact-image {
+        height: 100%;
+        min-height: 300px;
+        width: 45%;
+
+        background-color: $light-grey;
+    }
+
+    .contact-content {
+        width: 45%;
+
+        .contact-links-socials {
+            fill: $main-color-2;
+            color: $main-color-2;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .contact {
+        flex-direction: column;
+
+        .contact-image {
+            width: 100%;
+        }
+
+        .contact-content {
+            width: 100%;
+        } 
+    }
+}
