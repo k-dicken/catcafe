@@ -36,7 +36,10 @@ select,
 option,
 form,
 textarea,
-b
+b,
+li,
+ul,
+input
 {
     font-family: Sono;
 }
@@ -55,6 +58,19 @@ p {
 
 .bold {
     font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.error {
+    color: $red;
+    font-size: $body-S;
 }
 
 a {
@@ -109,14 +125,14 @@ button:hover, .button:hover {
 
 .section {
     width: 68%;
-    margin: 40px auto 0px auto;
+    margin: 0px auto;
     padding: 40px 0;
 }
 
 .break-out {
     width: 100%;
-    margin: 40px auto;
-    padding: 40px 16%;
+    margin: 20px auto;
+    padding: 60px 16%;
 }
 
 .column {
@@ -135,6 +151,34 @@ button:hover, .button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.self-center {
+    margin: 0 auto;
+}
+
+.divider {
+    height: 2px;
+    width: 100%;
+    margin: 40px 0 0 0;
+    background-color: $light-grey;
+    border-radius: 10px;
+}
+
+//SWEET ALERT THTAS WHAT ITS CALEEDDDDDDDDD
+
+input, select, textarea {
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: 2px solid $grey;
+}
+
+::placeholder, ::-ms-input-placeholder {
+    color: $grey;
+}
+
+input:focus {
+    border: 2px solid $main-color-2;
 }
 
 .padding {

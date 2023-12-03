@@ -1,0 +1,20 @@
+.review {
+    flex-direction: column;
+
+    b {
+        font-size: $body-L;
+    }
+
+    .review-total {
+        span {
+            font-size: $body-XL;
+            color: $main-color-2;
+            font-weight: bold;
+        }
+    }
+
+    button {
+        font-size: $body-L;
+        margin-top: 40px;
+    }
+}

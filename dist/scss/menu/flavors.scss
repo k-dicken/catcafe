@@ -1,0 +1,17 @@
+.flavors {
+    color: white;
+    background-color: $main-color-1;
+
+    .flavors-list {
+        width: 100%;
+        margin-top: 30px;
+
+        li {
+            width: calc(100% / 3);
+            list-style-type: none;
+            text-align: center;
+            margin: 6px 0;
+            font-style: italic;
+        }
+    }
+}

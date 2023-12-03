@@ -30,7 +30,10 @@ select,
 option,
 form,
 textarea,
-b {
+b,
+li,
+ul,
+input {
   font-family: Sono; }
 
 p {
@@ -43,11 +46,21 @@ p {
 .bold {
   font-weight: bold; }
 
+.hidden {
+  display: none; }
+
+.show {
+  display: block; }
+
+.error {
+  color: #d34;
+  font-size: 0.8em; }
+
 a {
-  color: #DD6A28; }
+  color: #DD6925; }
 
 a:hover {
-  color: #3B1C1C; }
+  color: #612E2E; }
 
 a:active {
   color: #FE9AB1; }
@@ -66,34 +79,34 @@ button:hover, .button:hover {
   cursor: pointer; }
 
 .button-main {
-  background-color: #DD6A28;
+  background-color: #DD6925;
   padding: 14px 24px;
   color: #fff; }
 
 .button-main:hover {
-  background-color: #3B1C1C;
+  background-color: #612E2E;
   color: #fff; }
 
 .button-sub {
   background-color: transparent;
   padding: 10px 20px;
-  border: 4px #DD6A28 solid;
-  color: #DD6A28;
+  border: 4px #DD6925 solid;
+  color: #DD6925;
   font-size: 0.8em; }
 
 .button-sub:hover {
-  border: 4px #3B1C1C solid;
-  color: #3B1C1C; }
+  border: 4px #612E2E solid;
+  color: #612E2E; }
 
 .section {
   width: 68%;
-  margin: 40px auto 0px auto;
+  margin: 0px auto;
   padding: 40px 0; }
 
 .break-out {
   width: 100%;
-  margin: 40px auto;
-  padding: 40px 16%; }
+  margin: 20px auto;
+  padding: 60px 16%; }
 
 .column {
   display: flex;
@@ -109,6 +122,27 @@ button:hover, .button:hover {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.self-center {
+  margin: 0 auto; }
+
+.divider {
+  height: 2px;
+  width: 100%;
+  margin: 40px 0 0 0;
+  background-color: #EBF3F2;
+  border-radius: 10px; }
+
+input, select, textarea {
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 2px solid #93A39F; }
+
+::placeholder, ::-ms-input-placeholder {
+  color: #93A39F; }
+
+input:focus {
+  border: 2px solid #DD6925; }
 
 .padding {
   padding: 40px 0; }
@@ -145,7 +179,8 @@ button:hover, .button:hover {
     padding: 40px 5%; } }
 
 header {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 40px; }
   header nav {
     width: 100%;
     padding: 16px 30px;
@@ -164,21 +199,34 @@ header {
         text-decoration: none;
         margin: 0 1vw; }
       header nav .nav-links .nav-links-socials {
-        margin-left: 40px; }
+        margin-left: 30px; }
+        header nav .nav-links .nav-links-socials a {
+          margin: 0 .5vw; }
     header nav .nav-hammenu {
-      display: hidden; }
+      display: none; }
+      header nav .nav-hammenu svg {
+        width: 20px;
+        height: 20px; }
+    header nav .nav-hammenu:hover {
+      cursor: pointer; }
   header .header-line {
     width: 100%;
     padding: 10px;
-    background-color: #DD6A28; }
+    background-color: #DD6925; }
     header .header-line p {
       margin: 0;
       font-size: 0.8em;
       color: #fff; }
 
+@media screen and (max-width: 800px) {
+  header nav .nav-links {
+    display: none; }
+  header nav .nav-hammenu {
+    display: block; } }
+
 .hours {
   width: 100%;
-  background-color: #DD6A28; }
+  background-color: #DD6925; }
   .hours .hours-section {
     color: white; }
     .hours .hours-section .hours-content {
@@ -196,7 +244,7 @@ header {
         .hours .hours-section .hours-content .hours-row .table-hours {
           text-align: right; }
       .hours .hours-section .hours-content .hours-row:hover {
-        background-color: #8C4322; }
+        background-color: #9B4928; }
 
 .contact .contact-image {
   height: 100%;
@@ -207,8 +255,8 @@ header {
 .contact .contact-content {
   width: 45%; }
   .contact .contact-content .contact-links-socials {
-    fill: #DD6A28;
-    color: #DD6A28;
+    fill: #DD6925;
+    color: #DD6925;
     margin-top: 40px; }
 
 @media screen and (max-width: 1000px) {
@@ -270,8 +318,31 @@ header {
 
 .step2 .step2-form {
   width: 100%; }
+  .step2 .step2-form .form-info {
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+    background-color: blue; }
+    .step2 .step2-form .form-info button {
+      border: none;
+      background-color: transparent;
+      padding: 0 10px;
+      font-weight: bold;
+      font-size: 1.2em; }
+    .step2 .step2-form .form-info .day {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      line-height: 1em; }
   .step2 .step2-form .form-times {
-    width: 45%; }
+    height: 400px;
+    width: 45%;
+    background-color: #EBF3F2;
+    border: #EBF3F2 4px solid; }
+    .step2 .step2-form .form-times .form-time {
+      padding: 10px;
+      border: #EBF3F2 2px solid;
+      background-color: #fff; }
   .step2 .step2-form .form-calendar {
     width: 50%; }
     .step2 .step2-form .form-calendar .calendar-item {
@@ -305,6 +376,286 @@ header {
         background-color: #93A39F;
         color: #fff; }
 
+.review {
+  flex-direction: column; }
+  .review b {
+    font-size: 1.2em; }
+  .review .review-total span {
+    font-size: 1.4em;
+    color: #DD6925;
+    font-weight: bold; }
+  .review button {
+    font-size: 1.2em;
+    margin-top: 40px; }
+
+.cats .cats-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .cats .cats-items .cat-item {
+    width: 30%; }
+    .cats .cats-items .cat-item .cat-item-top {
+      height: 220px;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 30px; }
+      .cats .cats-items .cat-item .cat-item-top .cat-title {
+        width: 80%;
+        background-color: #DD6925;
+        padding: 16px 20px;
+        margin-left: -20px;
+        margin-bottom: -20px;
+        border-radius: 10px; }
+        .cats .cats-items .cat-item .cat-item-top .cat-title h3, .cats .cats-items .cat-item .cat-item-top .cat-title p {
+          margin-bottom: 0; }
+        .cats .cats-items .cat-item .cat-item-top .cat-title p {
+          font-size: 0.8em; }
+        .cats .cats-items .cat-item .cat-item-top .cat-title .gender-icon {
+          width: 30px;
+          margin-top: -40px;
+          margin-left: -15px; }
+          .cats .cats-items .cat-item .cat-item-top .cat-title .gender-icon svg {
+            width: 100%;
+            height: 100%; }
+    .cats .cats-items .cat-item .cat-item-bottom .cat-tags {
+      display: none; }
+      .cats .cats-items .cat-item .cat-item-bottom .cat-tags .cat-tag {
+        width: fit-content;
+        padding: 10px 20px;
+        display: flex;
+        background-color: #DD6925;
+        font-weight: bold;
+        border-radius: 20px; }
+        .cats .cats-items .cat-item .cat-item-bottom .cat-tags .cat-tag svg {
+          width: 16px;
+          margin-right: 10px; }
+        .cats .cats-items .cat-item .cat-item-bottom .cat-tags .cat-tag p {
+          margin-bottom: 0;
+          font-size: 0.8em; }
+
+.menu .menu-content {
+  display: flex; }
+
+.flavors {
+  color: white;
+  background-color: #612E2E; }
+  .flavors .flavors-list {
+    width: 100%;
+    margin-top: 30px; }
+    .flavors .flavors-list li {
+      width: calc(100% / 3);
+      list-style-type: none;
+      text-align: center;
+      margin: 6px 0;
+      font-style: italic; }
+
+.menu-section .menu-items {
+  flex-wrap: wrap; }
+  .menu-section .menu-items .menu-item {
+    width: 45%;
+    margin-top: 20px; }
+    .menu-section .menu-items .menu-item p {
+      margin-top: 6px; }
+    .menu-section .menu-items .menu-item .price {
+      margin-bottom: none;
+      color: #DD6925; }
+
+.menu-alt {
+  background-color: #EBF3F2; }
+
+.admin-header {
+  width: 100%;
+  height: 80px;
+  padding: 20px 40px;
+  border-bottom: 2px #EBF3F2 solid; }
+  .admin-header h1 {
+    margin-bottom: 0; }
+
+.add-item {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  min-height: fit-content;
+  width: 100vw;
+  background-color: #fff;
+  margin-bottom: 0;
+  flex-direction: column; }
+  .add-item .admin-inputs,
+  .add-item .admin-buttons {
+    width: 100%;
+    justify-content: center; }
+  .add-item .admin-buttons {
+    margin-top: 20px;
+    flex-direction: column; }
+    .add-item .admin-buttons .button {
+      margin-right: 0;
+      margin-bottom: 20px; }
+    .add-item .admin-buttons a {
+      cursor: pointer;
+      color: #93A39F; }
+
+.add-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  font-size: 1.4em; }
+
+.admin-items h2 {
+  margin-top: 20px; }
+
+.admin-items .admin-item {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 20px; }
+
+.admin-inputs {
+  width: 80%;
+  display: flex;
+  flex-direction: column; }
+  .admin-inputs .flex-column {
+    display: flex;
+    flex-direction: column; }
+  .admin-inputs label {
+    font-size: 0.8em;
+    margin-bottom: 6px; }
+  .admin-inputs .row {
+    margin-bottom: 10px; }
+  .admin-inputs .input-name {
+    width: 48%; }
+  .admin-inputs .input-price {
+    width: 18%; }
+  .admin-inputs .input-dropdown {
+    width: 24%; }
+  .admin-inputs .input-desc {
+    width: 100%; }
+
+.admin-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: fit-content; }
+  .admin-buttons .button {
+    height: fit-content;
+    font-size: 0.8em;
+    margin-right: 10px; }
+  .admin-buttons .icon {
+    background-color: transparent;
+    border: none; }
+    .admin-buttons .icon svg {
+      width: 18px;
+      height: 18px; }
+
+@media screen and (max-width: 1000px) {
+  .admin-item {
+    flex-direction: column; }
+    .admin-item .admin-inputs {
+      width: 100%; }
+      .admin-item .admin-inputs input {
+        font-size: 0.8em; }
+    .admin-item .admin-buttons {
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px; } }
+
+.password {
+  height: 60%;
+  flex-direction: column; }
+  .password input {
+    width: 40%;
+    min-width: 300px;
+    margin: 20px 0 0px 0; }
+
+.admin-reservations {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #EBF3F2;
+  margin: 0; }
+  .admin-reservations p {
+    margin-bottom: 4px; }
+  .admin-reservations .reservations-nav {
+    height: 120px;
+    min-width: 100%;
+    display: flex;
+    background-color: #fff; }
+    .admin-reservations .reservations-nav .reservations-nav-day {
+      width: 120px;
+      padding: 20px;
+      flex-direction: column;
+      background-color: white;
+      border: #EBF3F2 1px solid; }
+      .admin-reservations .reservations-nav .reservations-nav-day .small {
+        font-size: 0.8em;
+        color: #93A39F; }
+      .admin-reservations .reservations-nav .reservations-nav-day b {
+        font-size: 1.2em; }
+    .admin-reservations .reservations-nav .reservations-nav-day:hover {
+      background-color: #EBF3F2;
+      cursor: pointer; }
+    .admin-reservations .reservations-nav .active-day {
+      background-color: #EBF3F2; }
+  .admin-reservations .reservations {
+    height: calc(100vh - 200px);
+    overflow-y: scroll;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    background-color: #EBF3F2;
+    margin: 0; }
+    .admin-reservations .reservations .time {
+      margin: 20px 0;
+      width: 100%;
+      align-items: center; }
+      .admin-reservations .reservations .time .bar {
+        height: 1px;
+        width: 84%;
+        background-color: #000; }
+    .admin-reservations .reservations .reservation-block {
+      width: 84%;
+      margin: 10px 0; }
+      .admin-reservations .reservations .reservation-block .reservation-guests {
+        width: 26%;
+        padding: 20px;
+        background-color: #fff; }
+        .admin-reservations .reservations .reservation-block .reservation-guests b {
+          margin-bottom: 12px; }
+      .admin-reservations .reservations .reservation-block .reservation-info {
+        width: 72%;
+        padding: 20px;
+        background-color: #fff; }
+        .admin-reservations .reservations .reservation-block .reservation-info .reservation-time {
+          text-align: right; }
+        .admin-reservations .reservations .reservation-block .reservation-info .reservation-contact {
+          text-align: right; }
+
+.cats-add .admin-inputs .row-bottom {
+  width: 100%;
+  height: fit-content; }
+  .cats-add .admin-inputs .row-bottom .img-input {
+    width: 32%;
+    height: 100%; }
+  .cats-add .admin-inputs .row-bottom .desc-input {
+    width: 62%; }
+
+.admin-menu {
+  min-height: 100%;
+  background-color: #EBF3F2; }
+  .admin-menu .admin-menu-nav {
+    padding: 20px 10%;
+    background-color: white; }
+
 footer {
   height: 400px;
-  background-color: #3B1C1C; }
+  margin-top: 80px;
+  background-color: #612E2E; }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+  </head>
+  <body>
+    <div class="admin-header">
+      <h1>Menu</h1>
+    </div>
+    <div id="admin-menu-content" class="admin-menu hidden">
+      <div class="admin-menu-nav row">
+        <a href="#seasonals">Seasonals</a>
+        <a href="#coffee">Coffee</a>
+        <a href="#lattes">Lattes</a>
+        <a href="#teas">Teas</a>
+        <a href="#bakery">Bakery</a>
+      </div>
+      <button id="add" class="add-button button button-main">+</button>
+      <div id="admin-menu-items" class="admin-items section">
+        <div id="seasonals">
+          <h2>Seasonals</h2>
+          <div id="seasonal-items" class="admin-items column"></div>
+        </div>
+
+        <div id="coffee">
+          <h2>Coffee</h2>
+          <div id="coffee-items" class="admin-items column"></div>
+        </div>
+
+        <div id="lattes">
+          <h2>Lattes</h2>
+          <div id="latte-items" class="admin-items column"></div>
+        </div>
+
+        <div id="teas">
+          <h2>Teas</h2>
+          <div id="tea-items" class="admin-items column"></div>
+        </div>
+
+        <div id="bakery">
+          <h2>Bakery</h2>
+          <div id="bakery-items" class="admin-items column"></div>
+        </div>
+      </div>
+    </div>
+    <div id="add-item" class="hidden">
+      <div class="add-item admin-item row break-out">
+        <h2>Add New Item</h2>
+        <div class="admin-inputs">
+          <div class="row">
+            <div class="input-name flex-column">
+              <label for="name">Item Name</label>
+              <input id="add-name" name="name" type="text" />
+            </div>
+            <div class="input-price flex-column">
+              <label for="price">Price</label>
+              <input id="add-price" name="price" type="number" />
+            </div>
+            <div class="input-dropdown flex-column">
+              <label for="category">Category</label>
+              <select id="add-category" name="category">
+                <option value="seasonal">Seasonal</option>
+                <option value="coffee">Coffee</option>
+                <option value="latte">Latte</option>
+                <option value="tea">Teas</option>
+                <option value="bakery">Bakery</option>
+              </select>
+            </div>
+          </div>
+          <label for="desc">Description</label>
+          <textarea
+            id="add-desc"
+            name="desc"
+            class="input-desc"
+            type="text"
+          ></textarea>
+        </div>
+        <div class="menu-buttons">
+          <button class="button button-main" onclick="addMenuItem()">
+            Add Item
+          </button>
+          <a id="add-close" class="close-add"
+            >close</a
+          >
+        </div>
+      </div>
+    </div>
+    <div id="password-section" class="password center section">
+      <label for="password">Please enter password</label>
+      <input id="password-input" type="password" name="password" />
+      <p id="password-error" class="error hidden">Error</p>
+      <br />
+      <input
+        id="password-submit"
+        class="button button-main"
+        type="submit"
+        value="Submit"
+      />
+    </div>
+    <script src="../../lib/jquery-3.7.1.min.js"></script>
+    <script src="../../app/app.js"></script>
+  </body>
+</html>

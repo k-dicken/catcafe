@@ -1,0 +1,140 @@
+.add-item {
+  position: fixed;
+  bottom: 0;
+  left:0;
+  min-height: fit-content;
+  width: 100vw;
+  background-color: $white;
+  margin-bottom: 0;
+  flex-direction: column;
+
+  .admin-inputs,
+  .admin-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .admin-buttons {
+    margin-top: 20px;
+    flex-direction: column;
+
+    .button {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    a {
+      cursor: pointer;
+      color: $grey;
+    }
+  }
+}
+
+.add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    font-size: $body-XL;
+}
+
+.admin-items { 
+
+    h2 {
+        margin-top: 20px;
+    }
+
+    .admin-item {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: $white;
+        border-radius: 20px;
+    }
+}
+
+.admin-inputs {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  
+    // background-color: blue;
+  
+    .flex-column {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    label {
+      font-size: $body-S;
+      margin-bottom: 6px;
+    }
+  
+    .row {
+      margin-bottom: 10px;
+    }
+  
+    .input-name {
+      width: 48%;
+    }
+  
+    .input-price {
+      width: 18%;
+    }
+  
+    .input-dropdown {
+      width: 24%;
+    }
+  
+    .input-desc {
+      width: 100%;
+    }
+  }
+  
+  .admin-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: fit-content;
+  
+      .button {
+          height: fit-content;
+          font-size: $body-S;
+          margin-right: 10px;
+      }
+  
+      .icon {
+          background-color: transparent;
+          border: none;
+  
+          svg {
+              width: 18px;    
+              height: 18px;
+          }
+      }
+  }
+
+@media screen and (max-width: 1000px) {
+  .admin-item {
+    flex-direction: column;
+
+    .admin-inputs {
+      width: 100%;
+
+      input {
+        font-size: $body-S;
+      }
+    }
+
+    .admin-buttons {
+      width: 100%;
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
+}

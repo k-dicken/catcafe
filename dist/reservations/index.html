@@ -9,7 +9,7 @@
   </head>
   <body>
     <header>
-      <nav class="column nav">
+      <nav class="row nav">
         <a href="../" class="nav-logo">
           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M269.4 2.9C265.2 1 260.7 0 256 0s-9.2 1-13.4 2.9L54.3 82.8c-22 9.3-38.4 31-38.3 57.2c.5 99.2 41.3 280.7 213.6 363.2c16.7 8 36.1 8 52.8 0C454.7 420.7 495.5 239.2 496 140c.1-26.2-16.3-47.9-38.3-57.2L269.4 2.9zM160 154.4c0-5.8 4.7-10.4 10.4-10.4h.2c3.4 0 6.5 1.6 8.5 4.3l40 53.3c3 4 7.8 6.4 12.8 6.4h48c5 0 9.8-2.4 12.8-6.4l40-53.3c2-2.7 5.2-4.3 8.5-4.3h.2c5.8 0 10.4 4.7 10.4 10.4V272c0 53-43 96-96 96s-96-43-96-96V154.4zM216 288a16 16 0 1 0 0-32 16 16 0 1 0 0 32zm96-16a16 16 0 1 0 -32 0 16 16 0 1 0 32 0z"/></svg>
         </a>
@@ -61,10 +61,14 @@
       </div>
       <div>
         <div class="labels">
-          <label class="name" for="name">Name</label>
-          <label class="age" for="age">Age</label><br>
-          <input class="name" type="text" name="name">
-          <input class="age" type="text" name="age">
+          <div>
+            <label class="name" for="name">Name</label><br>
+            <input class="name" type="text" name="name">
+          </div>
+          <div>
+            <label class="age" for="age">Age</label><br>
+            <input class="age" type="text" name="age">
+          </div>
           <button>+</button>
         </div>
         <div></div>
@@ -78,7 +82,7 @@
         <div class="form-info column">
           <div class="row">
             <button><</button>
-            <p><b>Saturday</b> Nov, 11th 2023</p>
+            <div class="day"><b>Saturday </b><p></p></div>
             <button>></button>
           </div>
         </div>
@@ -88,7 +92,7 @@
               <b class="time-time">12:30 PM</b>
               <p class="time-spots">15 Spots Left</p>
             </div>
-            <div class="form-event">
+            <!-- <div class="form-event">
               <div class="column">
                 <b class="event-name">Name of Event</b>
                 <p class="event-spots">15 Spots Left</p>
@@ -98,13 +102,13 @@
                 Quod Enchiridion Epictetus stoici scripsit. Rodrigo Abela.
               </p>
               <button>Learn More</button>
-            </div>
+            </div> -->
             <div class="form-time column">
               <b class="time-time">3:00 PM</b>
               <p class="time-spots">15 Spots Left</p>
             </div>
           </div>
-          <div class="form-calendar">
+          <!-- <div class="form-calendar">
             <div class="form-calendar-header column">
               <b>November 2023</b>
               <div class="column">
@@ -121,26 +125,26 @@
               <b class="calendar-item">Sat</b>
               <b class="calendar-item">Sun</b>
             </div>
-            <div class="form-calendar-days">
-              <div class="calendar-item past-day"><p>30</p></div>
-              <div class="calendar-item past-day"><p>31</p></div>
-              <div class="calendar-item inactive-day"><p>1</p></div>
-              <div class="calendar-item inactive-day"><p>2</p></div>
-              <div class="calendar-item current-day"><p>3</p></div>
-              <div class="calendar-item active-day"><p>4</p></div>
-              <div class="calendar-item future-day"><p>5</p></div>
-            </div>
-          </div>
+            <ul class="form-calendar-days">
+              <li class="calendar-item past-day">30</li>
+              <li class="calendar-item past-day">31</li>
+              <li class="calendar-item inactive-day">1</li>
+            </ul>
+          </div> -->
         </div>
       </div>
     </div>
 
-    <div class="review"></div>
+    <div class="review section center">
+      <p class="review-items"><b id="persons">2</b> persons × <b id="price">$10.00</b> per-person for <b>30-Minute Weekend Visit</b></p>
+      <b class="review-total">Total <span>$20.00 USD</span></b>
+      <button class="button button-main">Check-out</button>
+    </div>
 
     <footer>
 
     </footer>
- <script src="lib/jquery-3.7.1.min.js"></script>
-<script src="app/app.js"></script>
+ <script src="../lib/jquery-3.7.1.min.js"></script>
+<script src="../app/app.js"></script>
 </body>
 </html>

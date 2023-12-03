@@ -1,0 +1,98 @@
+.admin-reservations {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $light-grey;
+    margin: 0;
+
+    p {
+        margin-bottom: 4px; 
+    }
+
+    .reservations-nav {
+        height: 120px;
+        min-width: 100%;
+        display: flex;
+        background-color: $white;
+
+        .reservations-nav-day {
+            width: 120px;
+            padding: 20px;
+            flex-direction: column;
+            background-color: white;
+            border: $light-grey 1px solid;
+
+            .small {
+                font-size: $body-S;
+                color: $grey;
+            }
+
+            b {
+                font-size: $body-L;
+            }
+        }
+
+        .reservations-nav-day:hover {
+            background-color: $light-grey;
+            cursor: pointer;
+        }
+
+        .active-day {
+            background-color: $light-grey;
+        }
+    }
+
+    .reservations {
+        height: calc(100vh - 200px);
+        overflow-y: scroll;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        background-color: $light-grey;
+        margin: 0;
+    
+        .time {
+            margin: 20px 0;
+            width: 100%;    
+            align-items: center;
+    
+            .bar {
+                height: 1px;
+                width: 84%;
+                background-color: $black;
+            }
+    
+        }
+    
+        .reservation-block {
+            width: 84%;
+            margin: 10px 0;
+            
+            .reservation-guests {
+                width: 26%;
+                padding: 20px;
+                background-color: $white;
+    
+                b {
+                    margin-bottom: 12px;
+                }
+            }
+    
+            .reservation-info {
+                width: 72%;
+                padding: 20px;
+                background-color: $white;
+    
+                .reservation-time {
+                    text-align: right;
+                }
+    
+                .reservation-contact {
+                    text-align: right;
+                } 
+            }
+        }
+    }
+}

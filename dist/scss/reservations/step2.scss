@@ -2,8 +2,40 @@
     .step2-form {
         width: 100%;
 
+        .form-info {
+            width: 100%;
+            margin-bottom: 20px;
+            align-items: center;
+            background-color: blue;
+
+            button {
+                border: none;
+                background-color: transparent;
+                padding: 0 10px;
+                font-weight: bold;
+                font-size: $body-L;
+            }
+
+            .day {
+                display: flex;
+                align-items: center;
+                margin-bottom: 0;
+                line-height: 1em;
+            }
+        }
+
         .form-times {
+            height: 400px;
             width: 45%;
+
+            background-color: $light-grey;
+            border: $light-grey 4px solid;
+
+            .form-time {
+                padding: 10px;
+                border: $light-grey 2px solid;
+                background-color: $white;
+            }
         }
     
         .form-calendar {

@@ -1,0 +1,25 @@
+.menu-section {
+
+    .menu-items {
+        flex-wrap: wrap;
+
+        .menu-item {
+            width: 45%;
+
+            margin-top: 20px;
+
+            p {
+                margin-top: 6px;
+            }
+
+            .price {
+                margin-bottom: none;
+                color: $main-color-2;
+            }
+        }
+    }
+}
+
+.menu-alt {
+    background-color: $light-grey;
+}

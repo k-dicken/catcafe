@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+  </head>
+  <body>
+    <div class="admin-header">
+      <h1>Cats</h1>
+      <button id="add" class="add-button button button-main">+</button>
+      <div id="add-item" class="add-item cats-add hidden admin-item row break-out">
+          <h2>Add New Item</h2>
+          <div class="admin-inputs row">
+            <div class="row-top row">
+              <div class="input-name flex-column">
+                <label for="name">Cat Name</label>
+                <input id="add-name" name="name" type="text">
+              </div>
+              <div class="input-price flex-column">
+                <label for="age">Age (years)</label>
+                <input id="add-age" name="age" type="number" placeholder="Years">
+              </div>
+              <div class="input-dropdown flex-column">
+                <label for="gender">Gender</label>
+                <select id="add-gender" name="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                </select>
+              </div>
+            </div>
+            <div class="row-bottom row">
+              <div class="img-input flex-column">
+                <label for="img">Select Image</label>
+                <input type="file" id="add-img" name="img" accept="image/*">
+              </div>
+              <div class="desc-input flex-column">
+                <label for="desc">Description</label>
+                <textarea id="add-desc" name="desc" class="input-desc" type="text"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="admin-buttons">
+            <input class="button button-main" type="submit" value="Add CATTT" onclick="addCat()">
+            <a id="add-close" class="close-add">close</a>
+          </div>
+      </div>
+      <div id="cat-items" class="section"></div>
+ <script src="../../lib/jquery-3.7.1.min.js"></script>
+ <script src="../../app/app.js"></script>
+</body>
+</html>
