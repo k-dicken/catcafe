@@ -13,8 +13,10 @@ The administration features are meant to be hidden from the average users. The i
 2. Enter the password: I want to pet a cat.
 
 ###Reservation Page Features
+https://in-info-web4.informatics.iupui.edu/~kdicken/catcafe/dist/reservations/admin/
 
 ###Cat Page Features
+https://in-info-web4.informatics.iupui.edu/~kdicken/catcafe/dist/cats/admin/
 
 ###Menu Page Features
-
+https://in-info-web4.informatics.iupui.edu/~kdicken/catcafe/dist/menu/admin/
