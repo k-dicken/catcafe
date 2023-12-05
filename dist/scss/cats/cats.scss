@@ -5,9 +5,11 @@
 
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .cat-item {
             width: 30%;
+            margin-bottom: 40px;
         
             .cat-item-top {
               height: 220px;
@@ -17,32 +19,53 @@
               align-items: flex-end;
         
               margin-bottom: 30px;
+
+              background-color: $grey;
         
               .cat-title {
                 width: 80%;
                 background-color: $main-color-2;
-                padding: 16px 20px;
+                padding: 10px 20px;
                 margin-left: -20px;
                 margin-bottom: -20px;
                 border-radius: 10px;
         
                 h3, p {
                     margin-bottom: 0;
+                    color: $white;
                 }
         
                 p {
                     font-size: $body-S;
                 }
+
+                .female {
+                    background-color: $pink;
+                }
+
+                .male {
+                    background-color: $blue;
+                }
         
                 .gender-icon {
-                    width: 30px;
+                    height: 36px;
+                    width: 36px;
+                    border-radius: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
         
                     margin-top: -40px;
                     margin-left: -15px;
+                    margin-bottom: 4px;
+                    padding: 6px;
+
+                    // background-color: $grey;
         
                     svg {
-                        width: 100%;
-                        height: 100%;
+                        fill: $white;
+                        width: 80%;
+                        height: 80%;
                     }
                 }
               }
@@ -51,7 +74,7 @@
             .cat-item-bottom {
                 .cat-tags {
                     display: none;
-                    
+
                     .cat-tag {
                         width: fit-content;
                         padding: 10px 20px;

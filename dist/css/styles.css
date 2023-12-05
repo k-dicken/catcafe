@@ -391,33 +391,49 @@ header {
 .cats .cats-items {
   width: 100%;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
   .cats .cats-items .cat-item {
-    width: 30%; }
+    width: 30%;
+    margin-bottom: 40px; }
     .cats .cats-items .cat-item .cat-item-top {
       height: 220px;
       width: 100%;
       display: flex;
       align-items: flex-end;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      background-color: #93A39F; }
       .cats .cats-items .cat-item .cat-item-top .cat-title {
         width: 80%;
         background-color: #DD6925;
-        padding: 16px 20px;
+        padding: 10px 20px;
         margin-left: -20px;
         margin-bottom: -20px;
         border-radius: 10px; }
         .cats .cats-items .cat-item .cat-item-top .cat-title h3, .cats .cats-items .cat-item .cat-item-top .cat-title p {
-          margin-bottom: 0; }
+          margin-bottom: 0;
+          color: #fff; }
         .cats .cats-items .cat-item .cat-item-top .cat-title p {
           font-size: 0.8em; }
+        .cats .cats-items .cat-item .cat-item-top .cat-title .female {
+          background-color: #E6A; }
+        .cats .cats-items .cat-item .cat-item-top .cat-title .male {
+          background-color: #66E; }
         .cats .cats-items .cat-item .cat-item-top .cat-title .gender-icon {
-          width: 30px;
+          height: 36px;
+          width: 36px;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           margin-top: -40px;
-          margin-left: -15px; }
+          margin-left: -15px;
+          margin-bottom: 4px;
+          padding: 6px; }
           .cats .cats-items .cat-item .cat-item-top .cat-title .gender-icon svg {
-            width: 100%;
-            height: 100%; }
+            fill: #fff;
+            width: 80%;
+            height: 80%; }
     .cats .cats-items .cat-item .cat-item-bottom .cat-tags {
       display: none; }
       .cats .cats-items .cat-item .cat-item-bottom .cat-tags .cat-tag {
@@ -554,6 +570,9 @@ header {
       width: 18px;
       height: 18px; }
 
+.admin-content {
+  background-color: #EBF3F2; }
+
 @media screen and (max-width: 1000px) {
   .admin-item {
     flex-direction: column; }
@@ -647,6 +666,18 @@ header {
     height: 100%; }
   .cats-add .admin-inputs .row-bottom .desc-input {
     width: 62%; }
+
+.admin-cats-items .admin-item .admin-inputs .input-name {
+  width: 70%; }
+
+.admin-cats-items .admin-item .admin-inputs .input-age {
+  width: 28%; }
+
+.admin-cats-items .admin-item .admin-inputs .input-img {
+  width: 70%; }
+
+.admin-cats-items .admin-item .admin-inputs .input-dropdown {
+  width: 28%; }
 
 .admin-menu {
   min-height: 100%;

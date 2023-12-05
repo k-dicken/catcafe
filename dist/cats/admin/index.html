@@ -10,9 +10,14 @@
   <body>
     <div class="admin-header">
       <h1>Cats</h1>
+    </div>
+    <div id="admin-cats-content" class="admin-content hidden">
+      <div id="admin-cats-items" class="admin-cats-items admin-items section">
+      </div>
       <button id="add" class="add-button button button-main">+</button>
-      <div id="add-item" class="add-item cats-add hidden admin-item row break-out">
-          <h2>Add New Item</h2>
+      <div id="add-item" class="hidden">
+        <div class="add-item cats-add admin-item row break-out">
+          <h2>Add New Cat Profile</h2>
           <div class="admin-inputs row">
             <div class="row-top row">
               <div class="input-name flex-column">
@@ -40,14 +45,23 @@
                 <label for="desc">Description</label>
                 <textarea id="add-desc" name="desc" class="input-desc" type="text"></textarea>
               </div>
+              <!-- <div class="likes-input flex-column">
+                <label for="likes">Likes</label>
+                <div id="add-likes" name="likes">
+                  <input class="add-likes" type="checkbox" name="likes" value="Cats">Cats<br> 
+                  <input class="add-likes" type="checkbox" name="likes" value="Dogs">Dogs<br>        
+                  <input class="add-likes" type="checkbox" name="likes" value="Kids">Kids<br>
+                </div>
+              </div> -->
             </div>
           </div>
           <div class="admin-buttons">
-            <input class="button button-main" type="submit" value="Add CATTT" onclick="addCat()">
+            <input class="button button-main" type="submit" value="Add Cat Profile" onclick="addCat()">
             <a id="add-close" class="close-add">close</a>
           </div>
       </div>
-      <div id="cat-items" class="section"></div>
+      </div>
+    </div>
  <script src="../../lib/jquery-3.7.1.min.js"></script>
  <script src="../../app/app.js"></script>
 </body>

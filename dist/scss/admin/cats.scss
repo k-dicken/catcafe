@@ -1,5 +1,6 @@
 .cats-add {
     .admin-inputs {
+        
         .row-bottom {
             width: 100%;
             height: fit-content;
@@ -11,6 +12,25 @@
 
             .desc-input {
                 width: 62%;
+            }
+        }
+    }
+}
+
+.admin-cats-items {
+    .admin-item {
+        .admin-inputs {
+            .input-name {
+                width: 70%
+            }
+            .input-age {
+                width: 28%
+            }
+            .input-img {
+                width: 70%
+            }
+            .input-dropdown {
+                width: 28%
             }
         }
     }

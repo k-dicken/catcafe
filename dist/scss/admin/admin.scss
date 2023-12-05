@@ -119,6 +119,10 @@
       }
   }
 
+.admin-content {
+  background-color: $light-grey;
+}
+
 @media screen and (max-width: 1000px) {
   .admin-item {
     flex-direction: column;
