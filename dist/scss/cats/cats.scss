@@ -98,3 +98,19 @@
           }
     }
 }
+
+@media screen and (max-width: 800px) {
+    .cats {
+
+        .cats-items {
+    
+            .cat-item {
+                width: 100%;
+
+                .cat-item-top {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}

@@ -8,13 +8,6 @@ header {
 
         align-items: center;
 
-        .nav-logo {
-            height: 40px;
-            width: 100px;
-            // max-width: fit-content;
-            background-color: $grey;
-        }
-
         .nav-links {
             display: flex;
             justify-content: end;
@@ -61,6 +54,58 @@ header {
             font-size: $body-S;
             color: $white;
         }
+    }
+}
+
+.mobile-nav {
+    height: fit-content;
+    height: 90%;
+    width: 80%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    padding: 16px 30px;
+
+    background-color: $white;
+    border-right: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 20px;
+
+        a {
+            margin: 20px 0;
+        }
+
+        .nav-links-socials {
+            margin-top: 60px;
+            a {
+                margin: 0 .5vw;  
+            }
+        }
+    }
+}
+
+.nav-logo {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $black;
+
+    svg {
+        height: 80%;
+        margin-right: 10px;
+    }
+
+    b {
+        font-size: $body-XL;
+        color: $black;
     }
 }
 

@@ -437,6 +437,11 @@ function resetAdminMenuData() {
     $('#tea-items').html('');
     $('#bakery-items').html('');
 
+    $("#add-name").val("");
+    $("#add-price").val("");
+    $("#add-desc").val("");
+    $("#add-category").val("");
+
     $("#add-item").removeClass("show");
     $("#add-item").addClass("hidden");
 
@@ -491,11 +496,39 @@ async function addMenuItemData(name, price, desc, category) {
   resetAdminMenuData();
 }
 
+//
+//NAV FUNCTIONS
+//
+function navListeners() {
+  $("#nav-open").on("click", (e) => {
+    console.log("clcik"); 
+    $("#mobile-nav").addClass("show");
+    $("#mobile-nav").removeClass("hidden");
+    $("#nav-open").addClass("hidden");
+    $("#nav-open").removeClass("show");
+    $("#nav-close").addClass("show");
+    $("#nav-close").removeClass("hidden");
+ })
+ $("#nav-close").on("click", (e) => {
+  console.log("clcik"); 
+  $("#mobile-nav").addClass("hidden");
+  $("#mobile-nav").removeClass("show");
+  $("#nav-open").addClass("show");
+  $("#nav-open").removeClass("hidden");
+  $("#nav-close").addClass("hidden");
+  $("#nav-close").removeClass("show");
+})
+}
 
+//
 //PAGE FUNCTIONS
+//
+const headerLine = "Merry Christmas! We will be closed 24th & 25th."
+
 function initListeners() {
-    passwordListener();
-    adminListeners();
+  navListeners();
+  passwordListener();
+  adminListeners();
 }
 
 function checkPage() {
@@ -669,6 +702,8 @@ function checkPage() {
   }
 
   if(anyAdminCheck == true) {
+    $("#header-line").html(headerLine);
+
     pageArray.forEach(page => {
       if(page == 'menu') {
         getMenuData();

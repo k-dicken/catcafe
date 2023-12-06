@@ -23,3 +23,13 @@
 .menu-alt {
     background-color: $light-grey;
 }
+
+@media screen and (max-width: 800px) {
+    .menu-section {
+        .menu-items {
+            .menu-item {
+                width: 100%;
+            }
+        }
+    }
+}
