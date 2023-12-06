@@ -39,7 +39,8 @@ textarea,
 b,
 li,
 ul,
-input
+input,
+div
 {
     font-family: Sono;
 }
@@ -89,11 +90,10 @@ a:active {
     width: fit-content;
     display: block;
     border: none;
-    border-radius: 10px;
+    border-radius: 16px;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
     font-size: $body-M;
+    font-weight: 500;
 }
 
 button:hover, .button:hover {
@@ -101,8 +101,9 @@ button:hover, .button:hover {
 }
 
 .button-main {
+    color: $white;
     background-color: $main-color-2;
-    padding: 14px 24px;
+    padding: 12px 16px;
     color: $white;
 }
 .button-main:hover {
@@ -111,8 +112,9 @@ button:hover, .button:hover {
 }
 
 .button-sub {
+    color: $white;
     background-color: transparent;
-    padding: 10px 20px;
+    padding: 10px 14px;
     border: 4px $main-color-2 solid;
     color: $main-color-2;
     font-size: $body-S;
@@ -123,15 +125,24 @@ button:hover, .button:hover {
     color: $main-color-1;
 }
 
+.button-icon {
+    color: $black;
+    background-color: transparent;
+}
+
+.button-icon:hover {
+    color: $main-color-2;
+}
+
 .section {
     width: 68%;
-    margin: 0px auto;
+    margin: 10px auto;
     padding: 40px 0;
 }
 
 .break-out {
     width: 100%;
-    margin: 20px auto;
+    margin: 0px auto;
     padding: 60px 16%;
 }
 
@@ -165,8 +176,6 @@ button:hover, .button:hover {
     border-radius: 10px;
 }
 
-//SWEET ALERT THTAS WHAT ITS CALEEDDDDDDDDD
-
 input, select, textarea {
     padding: 10px 10px;
     border-radius: 10px;
@@ -189,8 +198,7 @@ input:focus {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .socials {

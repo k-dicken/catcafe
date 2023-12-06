@@ -87,23 +87,31 @@
       </div>
       <div class="step1-group">  
         <label for="reservation-quantity" class="bold">Who is in your group</label><br>
-        <input type="number" id="reservation-quantity" name="reservation-quantity" min="1" max="15">
-      </div>
-      <div>
-        <div class="labels">
-          <div>
-            <label class="name" for="name">Name</label><br>
-            <input class="name" type="text" name="name">
+        <input type="number" id="reservation-quantity" name="reservation-quantity" value="2" min="1" max="15">
+      <div class="group-names">
+        <div class="row">
+          <div class="name">
+            <label for="name">Name</label><br>
+            <input type="text" name="name">
           </div>
-          <div>
-            <label class="age" for="age">Age</label><br>
-            <input class="age" type="text" name="age">
+          <div class="age">
+            <label for="age">Age</label><br>
+            <input type="number" name="age">
           </div>
-          <button>+</button>
         </div>
-        <div></div>
+        <div class="row">
+          <div class="name">
+            <label for="name">Name</label><br>
+            <input type="text" name="name">
+          </div>
+          <div class="age">
+            <label for="age">Age</label><br>
+            <input type="number" name="age">
+          </div>
+        </div>
+        <button class="button button-main">+</button>
       </div>
-
+    </div>
     </div>
 
     <div id="step2" class="step2 section">
@@ -111,42 +119,21 @@
       <div class="step2-form">
         <div class="form-info column">
           <div class="row">
-            <button><</button>
-            <div class="day"><b>Saturday </b><p></p></div>
-            <button>></button>
+            <button class="button button-icon"><</button>
+            <div class="day"><p>Wednesday, December 6th 2023</p></div>
+            <button class="button button-icon">></button>
           </div>
         </div>
-        <div class="column">
-          <div class="form-times">
-            <div class="form-time column">
-              <b class="time-time">12:30 PM</b>
-              <p class="time-spots">15 Spots Left</p>
-            </div>
-            <!-- <div class="form-event">
-              <div class="column">
-                <b class="event-name">Name of Event</b>
-                <p class="event-spots">15 Spots Left</p>
-              </div>
-              <p class="event-time">1:00 — 3:00 pm</p>
-              <p class="event-description">
-                Quod Enchiridion Epictetus stoici scripsit. Rodrigo Abela.
-              </p>
-              <button>Learn More</button>
-            </div> -->
-            <div class="form-time column">
-              <b class="time-time">3:00 PM</b>
-              <p class="time-spots">15 Spots Left</p>
-            </div>
-          </div>
-          <!-- <div class="form-calendar">
-            <div class="form-calendar-header column">
-              <b>November 2023</b>
-              <div class="column">
-                <button><</button>
-                <button>></button>
+        <div class="form-displays column">
+          <div class="form-calendar">
+            <div class="form-calendar-header row">
+              <b>December 2023</b>
+              <div class="row">
+                <button class="button button-icon"><</button>
+                <button class="button button-icon">></button>
               </div>
             </div>
-            <div class="form-calendar-labels column">
+            <div class="form-calendar-labels row">
               <b class="calendar-item">Mon</b>
               <b class="calendar-item">Tue</b>
               <b class="calendar-item">Wed</b>
@@ -156,11 +143,169 @@
               <b class="calendar-item">Sun</b>
             </div>
             <ul class="form-calendar-days">
-              <li class="calendar-item past-day">30</li>
-              <li class="calendar-item past-day">31</li>
-              <li class="calendar-item inactive-day">1</li>
+              <div class="calendar-item">
+                <li class=" past-day">26</li>
+              </div>
+              <div class="calendar-item">
+                <li class=" past-day">27</li>
+              </div>
+              <div class="calendar-item">
+                <li class=" past-day">28</li>
+              </div>
+              <div class="calendar-item">
+                <li class=" past-day">29</li>
+              </div>
+              <div class="calendar-item">
+                <li class=" past-day">30</li>
+              </div>
+              <div class="calendar-item">
+                <li class=" inactive-day">1</li>
+              </div>
+              <div class="calendar-item">
+                <li class="inactive-day">2</li>
+              </div>
+              <div class="calendar-item">
+                <li class="inactive-day">3</li>
+              </div>
+              <div class="calendar-item">
+                <li class="inactive-day">4</li>
+              </div>
+              <div class="calendar-item">
+                <li class="inactive-day">5</li>
+              </div>
+              <div class="calendar-item">
+                <li class="current-day">6</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">7</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">8</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">9</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">10</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">11</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">12</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">13</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">14</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">15</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">16</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">17</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">18</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">19</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">20</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">21</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">22</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">23</li>
+              </div>
+              <div class="calendar-item">
+                <li class="inactive-day">24</li>
+              </div>
+              <div class="calendar-item">
+                <li class="inactive-day">25</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">26</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">27</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">28</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">29</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">30</li>
+              </div>
+              <div class="calendar-item">
+                <li class="active-day">31</li>
+              </div>
             </ul>
-          </div> -->
+          </div>
+          <div class="form-times">
+            <div class="form-time column">
+              <b class="time-time">10:00 AM</b>
+              <p class="time-spots">15 Spots Left</p>
+            </div>
+            <div class="form-time column">
+              <b class="time-time">10:30 AM</b>
+              <p class="time-spots">15 Spots Left</p>
+            </div>
+            <div class="form-time column">
+              <b class="time-time">11:00 AM</b>
+              <p class="time-spots">15 Spots Left</p>
+            </div>
+            <div class="form-time column">
+              <b class="time-time">11:30 AM</b>
+              <p class="time-spots">15 Spots Left</p>
+            </div>
+            <div class="form-time column">
+              <b class="time-time">12:00 PM</b>
+              <p class="time-spots">15 Spots Left</p>
+            </div>
+            <div class="form-time column">
+              <b class="time-time">12:30 PM</b>
+              <p class="time-spots">15 Spots Left</p>
+            </div>
+            <div class="form-event">
+              <div class="column">
+                <b class="event-name">Crochet with Cats</b>
+                <p class="event-spots">15 Spots Left</p>
+              </div>
+              <p class="event-time">1:00 — 3:00 pm</p>
+              <p class="event-description">
+                Learn beginner level crochet with cats! The lesson is 2 hours and yarn is provided
+              </p>
+              <button class="button button-main">Learn More</button>
+            </div>
+            <div class="form-time column">
+              <b class="time-time">3:00 PM</b>
+              <p class="time-spots">15 Spots Left</p>
+            </div>
+            <div class="form-time column">
+              <b class="time-time">3:30 PM</b>
+              <p class="time-spots">15 Spots Left</p>
+            </div>
+            <div class="form-time column">
+              <b class="time-time">4:00 PM</b>
+              <p class="time-spots">15 Spots Left</p>
+            </div>
+            <div class="form-time column">
+              <b class="time-time">4:30 PM</b>
+              <p class="time-spots">15 Spots Left</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -172,7 +317,7 @@
     </div>
 
     <footer>
-
+      <a href="https://github.com/k-dicken/catcafe">View Project on Github</a>
     </footer>
  <script src="../lib/jquery-3.7.1.min.js"></script>
 <script src="../app/app.js"></script>

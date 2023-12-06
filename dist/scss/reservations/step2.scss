@@ -6,7 +6,7 @@
             width: 100%;
             margin-bottom: 20px;
             align-items: center;
-            background-color: blue;
+            font-size: $body-L;
 
             button {
                 border: none;
@@ -19,82 +19,121 @@
             .day {
                 display: flex;
                 align-items: center;
-                margin-bottom: 0;
+                margin: 0 10px;
                 line-height: 1em;
-            }
-        }
-
-        .form-times {
-            height: 400px;
-            width: 45%;
-
-            background-color: $light-grey;
-            border: $light-grey 4px solid;
-
-            .form-time {
-                padding: 10px;
-                border: $light-grey 2px solid;
-                background-color: $white;
-            }
-        }
-    
-        .form-calendar {
-            width: 50%;
-
-            .calendar-item {
-                width: calc(100% / 7);
-                text-align: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .form-calendar-header {
-                b {
-                    font-size: $body-L;
-                }
-            }
-
-            .form-calendar-labels {
-                margin: 20px 0;
-            }
-
-            .form-calendar-days {
-                display: flex;
-                // justify-content: space-between;
-                flex-wrap: wrap;
 
                 p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .form-displays {
+            
+            .form-times {
+                height: 430px;
+                width: 45%;
+                overflow-y: scroll;
+                background-color: $light-grey;
+                border: $light-grey 4px solid;
+    
+                .form-time {
+                    padding: 10px;
+                    border: $light-grey 2px solid;
+                    background-color: $white;
+                }
+    
+                .form-event {
+                    padding: 10px;
+                    border: $light-grey 2px solid;
+                    background-color: #F7C998;
+    
+                    .column {
+                        margin-bottom: 2px;
+    
+                        p, b {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+    
+        
+            .form-calendar {
+                width: 50%;
+    
+                .calendar-item {
+                    width: calc(100% / 7);
+                    text-align: center;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
                 }
-
-                .past-day, .future-day {
-                    color: $grey;
-                }
-
-                .active-day, .current-day, .future-day {
-                    cursor: pointer;
-                }
-
-                .active-day {
-                    p {
-                        background-color: $light-grey;
+    
+                .form-calendar-header {
+                    b {
+                        font-size: $body-L;
                     }
                 }
-
-                .current-day {
-                    p {
-                        border: 2px solid $dark-grey;
-                        background-color: $grey;
-                        color: $white;
+    
+                .form-calendar-labels {
+                    margin: 20px 0;
+                }
+    
+                .form-calendar-days {
+                    display: flex;
+                    // justify-content: space-between;
+                    flex-wrap: wrap;
+    
+                    li {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40px;
+                        height: 40px;
+                        margin-bottom: 20px;
+                        border-radius: 50%;
+                    }
+    
+                    .past-day, .future-day {
+                        color: $grey;
+                    }
+    
+                    .active-day, .current-day, .future-day {
+                        cursor: pointer;
+                    }
+    
+                    .active-day {
+                        
+                            background-color: $light-grey;
+                        
+                    }
+    
+                    .current-day {
+                        
+                            border: 2px solid $dark-grey;
+                            background-color: $grey;
+                            color: $white;
+                        
                     }
                 }
             }
         }
     }
+}
+
+@media screen and (max-width: 1000px) {
+    .step2 {
+        .step2-form {
+            .form-displays {
+                width: 100%;
+                .form-times {
+                    width: 100%;
+                }
+                .form-calendar {
+                    width: 100%;
+            }
+        }
+    }
+}
 }

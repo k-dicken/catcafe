@@ -1,0 +1,38 @@
+.step1 {
+    input, select {
+        margin: 10px 0;
+    }
+
+    .step1-length {
+        margin-bottom: 20px;
+    }
+
+    .step1-group {
+        
+        .group-names {
+            width: 60%;
+            
+            .row {
+                width: 100%;
+
+                .name {
+                    width: 70%;
+                    input {
+                        width: 100%;
+                    }
+                }
+                .age {
+                    width: 20%;
+                    margin-left: 2%;
+                    input {
+                        width: 100%;
+                    }
+                }
+            }
+
+            button {
+                border-radius: 100px;
+            }
+        }
+    }
+}
